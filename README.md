@@ -6,7 +6,7 @@
 
 ### 1. Initial setup
 
-1. Fork the repository.
+1. Create a private fork of the repository. (Create your own repository, add this repository as a remote, and pull down code as a base)
 2. Clone a local working copy.
 3. Make sure you have recent enough versions of NodeJS and Yarn installed. We used NodeJS v10.16.3 and Yarn 1.19.1.
 4. Open a terminal and `cd` to your local working copy.
@@ -32,7 +32,7 @@ received.
 
 ### 3. Display a loading indicator while the events are loading
 
-Events load really fast locally, but that might not be the case in the real world. We can do better than 
+Events load really fast locally, but that might not be the case in the real world. We can do better than
 `<p>Loading...</p>`! Use your own judgement to design and build a spinner or other visual indication that the content
 is on its way. Make it in line with the Vivid visual identity.
 
