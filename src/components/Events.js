@@ -1,17 +1,19 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { useSelector } from 'react-redux'
-import { getEvents, isEventsReady, getEventsError } from '../selectors'
+import { getEvents, isEventsReady, getEventsError, eventTypeIdFilterSelector } from '../selectors'
 import { ReactComponent as TitleIcon } from '../icons/vivid-angle-top-left.svg'
 import theme from '../style/theme'
 import Event from './Event'
 import Spinner from './Spinner'
+import { SLUGS } from '../eventTypes'
 
 const Events = () => {
   const classes = useStyles()
   const ready = useSelector(isEventsReady)
   const events = useSelector(getEvents)
   const error = useSelector(getEventsError)
+  const typeId = useSelector(eventTypeIdFilterSelector)
 
   if (!error) {
     return (
@@ -34,7 +36,7 @@ const Events = () => {
     return (
       <>
         <h3>Ooops!</h3>
-        <p>Unable to find events in the selected category</p>
+        <p>Unable to find events in the <strong>{SLUGS[typeId]}</strong> category</p>
       </>
     )
   }
