@@ -6,12 +6,11 @@
 
 ### 1. Initial setup
 
-1. Create a private fork of the repository. (Create your own repository, add this repository as a remote, and pull down code as a base)
-2. Clone a local working copy.
-3. Make sure you have recent enough versions of NodeJS and Yarn installed. We used NodeJS v10.16.3 and Yarn 1.19.1.
-4. Open a terminal and `cd` to your local working copy.
-5. Execute `yarn` to install dependencies.
-6. Execute `yarn start`. It should open a browser onto http://localhost:3000/ and you should see a list of Vivid event
+1. Create a private fork of the repository. (Create your own repository, add this repository as a remote, and pull down this source as a base)
+2. Make sure you have recent enough versions of NodeJS and Yarn installed. We used NodeJS v10.16.3 and Yarn 1.19.1.
+3. Open a terminal and `cd` to your local working copy.
+4. Execute `yarn` to install dependencies.
+5. Execute `yarn start`. It should open a browser onto http://localhost:3000/ and you should see a list of Vivid event
    tiles in the browser. If you don’t, your first task is to get it running successfully!
 
 As you proceed through the subsequent steps, commit to git as you normally would and push your commits to your fork.
