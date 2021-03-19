@@ -5,6 +5,7 @@ import { getEvents, isEventsReady } from '../selectors'
 import { ReactComponent as TitleIcon } from '../icons/vivid-angle-top-left.svg'
 import theme from '../style/theme'
 import Event from './Event'
+import Spinner from './Spinner'
 
 const Events = () => {
   const classes = useStyles()
@@ -17,7 +18,7 @@ const Events = () => {
         <TitleIcon className={classes.titleIcon} />
         Results{ready && `: ${events.length} events found`}
       </h3>
-      {!ready && <p>Loading...</p>}
+      {!ready && <Spinner className={classes.spinner} />}
       {ready && (
         <div className={classes.tilesWrapper}>
           <div className={classes.tiles}>
@@ -61,7 +62,6 @@ const useStyles = createUseStyles({
       justifyContent: 'flex-start'
     }
   },
-
   tile: {
     margin: [0, 'auto', theme.gutter],
     maxWidth: theme.maxTileWidth,
@@ -73,6 +73,9 @@ const useStyles = createUseStyles({
     '@media (min-width: 1200px)': {
       width: `calc(${100 / 3}% - ${theme.gutter}px)`
     }
+  },
+  spinner: {
+    marginTop: theme.gutter
   }
 }, { name: 'Events' })
 
